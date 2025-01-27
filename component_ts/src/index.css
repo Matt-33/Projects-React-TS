@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+div {
+  padding: 10px;
+}
+
+h1 {
+  font-size: 24px;
+  color: #4caf50;
+}
+
+p {
+  font-size: 18px;
+}
