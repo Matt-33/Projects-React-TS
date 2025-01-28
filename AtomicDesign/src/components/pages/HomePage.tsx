@@ -7,7 +7,7 @@ import { useCreateItem } from "components/hooks/mutations";
 
 const HomePage: React.FC = () => {
   const { data: items, isLoading, isError, error } = useItems();
-  const { mutate: createItem, isLoading: isCreating, isError: isCreateError, error: createError } = useCreateItem();
+  const { mutate: createItem, isPending: isCreating, isError: isCreateError, error: createError } = useCreateItem();
 
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
@@ -35,7 +35,6 @@ const HomePage: React.FC = () => {
 
   return (
     <div>
-      {/* Formulaire d'ajout d'un item */}
       <form onSubmit={handleSubmit}>
         <input
           type="text"
@@ -56,7 +55,6 @@ const HomePage: React.FC = () => {
         {isCreateError && <p>Error: {createError?.message}</p>}
       </form>
 
-      {/* Liste des items */}
       {items?.map((item: any) => (
         <ItemCard key={item.id} item={item} />
       ))}
