@@ -1,12 +1,13 @@
-import React from 'react';
-import HomePage from '@pages/HomePage';
+import React from "react";
+import HomePage from "./components/pages/HomePage";
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
+    <div>
+      <h1>Mini-projet TanStack Query</h1>
       <HomePage />
     </div>
   );
-}
+};
 
 export default App;
